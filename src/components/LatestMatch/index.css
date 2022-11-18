@@ -1,0 +1,58 @@
+.latest-match-container {
+  margin-top: 24px;
+}
+.latest-matches-heading {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 18px;
+}
+.match-details-logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+@media (min-width: 768px) {
+  .match-details-logo-container {
+    flex-direction: row;
+    width: 60%;
+    padding-left: 32px;
+    padding-right: 0px;
+  }
+}
+.match-details-container-1 {
+  width: 70%;
+}
+@media (min-width: 768px) {
+  .match-details-container-1 {
+    width: 48%;
+  }
+}
+.latest-match-card {
+  display: flex;
+  background-color: #0f172a;
+  border-radius: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+.latest-match-team-name {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 20px;
+}
+.latest-match-team-date {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 18px;
+}
+.match-details {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 15px;
+}
+.match-logo {
+  max-height: 200px;
+  max-width: 200px;
+}
