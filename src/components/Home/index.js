@@ -1,9 +1,10 @@
 import {Component} from 'react'
+import Loader from 'react-loader-spinner'
 import TeamCard from '../TeamCard'
 import './index.css'
 
 class Home extends Component {
-  state = {iplTeams: []}
+  state = {iplTeams: [], isLoading: true}
 
   componentDidMount() {
     this.getIPLTeams()
@@ -19,10 +20,10 @@ class Home extends Component {
       teamImageUrl: eachTeam.team_image_url,
     }))
 
-    this.setState({iplTeams: formattedData})
+    this.setState({iplTeams: formattedData, isLoading: false})
   }
 
-  render() {
+  renderTeams() {
     const {iplTeams} = this.state
     return (
       <div className="app-container">
@@ -41,6 +42,18 @@ class Home extends Component {
         </ul>
       </div>
     )
+  }
+
+  renderSpinner = () => (
+    <div testid="loader" className="loader-container">
+      <Loader type="Oval" color="#ffffff" height={50} />
+    </div>
+  )
+
+  render() {
+    const {isLoading} = this.state
+
+    return isLoading ? this.renderSpinner() : this.renderTeams()
   }
 }
 

@@ -49,3 +49,10 @@
 .banner-image {
   width: 100%;
 }
+.match-card-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  flex-wrap: wrap;
+  padding-left: 0;
+}

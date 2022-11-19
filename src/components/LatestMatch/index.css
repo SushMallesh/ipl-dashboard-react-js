@@ -6,17 +6,32 @@
   font-family: 'Bree Serif';
   font-size: 18px;
 }
-.match-details-logo-container {
+.latest-match-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  background-color: #0f172a;
+  border-radius: 12px;
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+@media (min-width: 768px) {
+  .latest-match-card {
+    flex-direction: row;
+  }
+}
+
+.match-details-logo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   padding-left: 16px;
   padding-right: 16px;
 }
 @media (min-width: 768px) {
   .match-details-logo-container {
-    flex-direction: row;
     width: 60%;
     padding-left: 32px;
     padding-right: 0px;
@@ -29,13 +44,6 @@
   .match-details-container-1 {
     width: 48%;
   }
-}
-.latest-match-card {
-  display: flex;
-  background-color: #0f172a;
-  border-radius: 12px;
-  padding-top: 24px;
-  padding-bottom: 24px;
 }
 .latest-match-team-name {
   color: #ffffff;
@@ -53,6 +61,40 @@
   font-size: 15px;
 }
 .match-logo {
-  max-height: 200px;
-  max-width: 200px;
+  max-width: 60px;
+}
+@media (min-width: 768px) {
+  .match-logo {
+    max-height: 200px;
+    max-width: 200px;
+  }
+}
+.separator {
+  width: 100%;
+  border: 1px solid #475569;
+}
+@media (min-width: 768px) {
+  .separator {
+    display: none;
+  }
+}
+.latest-match-card-2 {
+  text-align: left;
+  padding-left: 16px;
+}
+@media (min-width: 768px) {
+  .latest-match-card-2 {
+    text-align: right;
+    padding-right: 30px;
+  }
+}
+.latest-match-details-label {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 18px;
+}
+.match-details {
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 14px;
 }

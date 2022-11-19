@@ -29,8 +29,19 @@ const LatestMatch = props => {
           <img
             className="match-logo"
             src={competingTeamLogo}
-            alt="Example response"
+            alt={`latest match ${competingTeam}`}
           />
+        </div>
+        <hr className="separator" />
+        <div className="latest-match-card-2">
+          <p className="latest-match-details-label">First Innings</p>
+          <p className="match-details">{firstInnings}</p>
+          <p className="latest-match-details-label">Second Innings</p>
+          <p className="match-details">{secondInnings}</p>
+          <p className="latest-match-details-label">Man Of The Match</p>
+          <p className="match-details">{manOfTheMatch}</p>
+          <p className="latest-match-details-label">Umpires</p>
+          <p className="match-details">{umpires}</p>
         </div>
       </div>
     </div>

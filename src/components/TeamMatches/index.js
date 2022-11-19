@@ -1,6 +1,7 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
 import LatestMatch from '../LatestMatch'
+import MatchCard from '../MatchCard'
 import './index.css'
 
 const teamsApiUrl = 'https://apis.ccbp.in/ipl/'
@@ -77,10 +78,22 @@ class TeamMatches extends Component {
   }
 
   renderLoader = () => (
-    <div className="loader-container">
+    <div testid="loader" className="loader-container">
       <Loader type="Oval" color="#ffffff" height={50} />
     </div>
   )
+
+  renderMatchCard = () => {
+    const {teamsData} = this.state
+    const {recentMatches} = teamsData
+    return (
+      <ul className="match-card-container">
+        {recentMatches.map(eachMatch => (
+          <MatchCard eachMatch={eachMatch} key={eachMatch.id} />
+        ))}
+      </ul>
+    )
+  }
 
   renderTeamMatches = () => {
     const {teamsData} = this.state
@@ -89,6 +102,7 @@ class TeamMatches extends Component {
       <div className="responsive-container">
         <img className="banner-image" src={teamBannerURL} alt="team banner" />
         <LatestMatch latestMatchData={latestMatch} />
+        {this.renderMatchCard()}
       </div>
     )
   }
